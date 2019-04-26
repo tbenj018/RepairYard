@@ -1,0 +1,21 @@
+program outline
+
+initialize supply vector 90% that at least one part of each type if yes then quantity = 2 to 4 (uniform dist)
+
+loop:///represents the number of time steps input by user
+    1. generate new vicsc for new_vee list
+    2. YardMaster scores the new_vee lists
+    3. new_vee are sorted:
+        a. scrapyard(list). (add total of parts if added then add broken parts if 50% or less go to scrapyard)
+        b. repair queue.
+    4. Check all bays
+        a. if bay is available then we check the priority queue of previously repaired
+        b. if PQ is empty then we loaad a vee from repair queue
+        c. if the bay is occupied then look at the next broken part and check:
+              i. scrapyard for it
+             ii. else check supply
+    5. check each testing field if vee then check all parts with a 97% pass rate
+        a. if pass delete
+        b. if fail pass on to PQ with lowest broken part sum is highest priority.
+
+make a diary of sorts

@@ -1,0 +1,49 @@
+vector   : access by index                                         :|   directional... ai + bj + ck = r V[a,b,c] so v[2] =c;
+list     : quick growth and shrink of collection, traversable      :|   highly dynamic, non-indexed collection
+          in both directions, insert/delete from the middle        :|   anything you wait in line for, soup.. etc
+queue    : Strictly FiFo data structures                           :|
+PQUEUE   : FiFo based on some parameter, auto insert               :|   wait in line for soup billionaires go first
+stack    : Lifo only allowed access via the top for both insert    :|   plates at golden gorral
+           and pop                                                 :|
+heap     : Use a hash, a specialized index, random memory location :|   database -> quick look up
+           really fast.. except if there are collisions            :|
+map      : relationships between nodes A->B or A->null             :|
+multimap : allow multiple mappings a->b, a->c or even a->a         :|   useful for AI apps and set operations/relationships
+
+
+we choose the collection(data structure) to match reality
+  1) list of broken vehicles.
+  2) process that list, with the yard master and either
+  3) move the vics from the list to
+      a) queue or
+      b) junkyard(list)
+  4) from the queue we will populate a vector of repair bays e.g... bay[0], bay[1], bay[2]
+      a) each bay must have an index number and a vehicles pointer( vee * current;)
+  5) inside the bay, go to the list of broken parts and check:
+      a) the scrapyard for replacementsvif found... then replace
+        that part with a count down = part id(repair rate? 4 or 5?)
+      b) else check the supply building. (vector of ints where the index = part # the value
+         is the number of parts of that ) e.g
+            i) SB[7] = 3; means there are 3 part# 6 available in supply building.
+  6) an vector of size 3 testing areas, three vehicles pointers(vee*)
+      a) what type is the current vee? now you know what parts it has
+      b) go through the list of parts, generating a random success value for each parts
+         97% if all parts pass then vee is released
+      c) else goes back to a seperate data structure(priority queue)
+
+
+
+
+2 lists
+3 vectors
+repair queue
+testing priority queue
+vehicles list, broken, and good
+
+INHERITANCE
+
+base class vehicles;
+INHERITed objects
+class tank
+class wheeled
+class half track

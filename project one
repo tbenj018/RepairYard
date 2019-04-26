@@ -1,0 +1,78 @@
+We need to design and assemble this project piece by piece.
+For each of the early phases you will get points for submission
+only if required data objects and functionality are included.
+This first phase will be about the vehicles themselves.
+Your code should be a menu driven interface that allows the
+user to create a mixed linked list of randomly generated vehicles.
+The Menu should be as follows:
+
+LIST OF VEE POINTERS!!!!!!!!!!!!
+
+        AFV Generation Menu
+1. Generate and add a damaged Tank type I
+2. Generate and add a damaged Tank type 2
+3. Generate and add a damaged Tank type 3
+4. Generate and add a damaged wheeled vehicle type 1
+5. Generate and add a damaged wheeled vehicle type 2
+6. Generate and add a half-track
+7. Display all vehicles
+8. Exit
+/*
+Tanks: type 1 has parts that have id numbers 1 through 11
+              type 2 has parts that are even numbered 2 through 22
+              type 3 has parts that are numbered 3 through 33 but are multiples of 3
+wheeled: type 1 has parts that are numbered 31 through 40
+                   type 2 has parts that are numbered 36 through 45
+half track vehicles have parts numbered 1 through 5 and 31 through 40
+The average number of damaged parts is 3 with standard deviation of 1 for tanks
+and 5 with standard deviation of 2 for wheeled AND half tracks.
+  base class is vehicles
+*/
+  list of broken parts etc.
+
+
+list<vee*, vee*, vee* ...> mean 2 std 1
+
+class yardMaster{
+  bool score(vee* vptr) timestep= 3 hours
+  T = vptr -> get
+  if(T==1) {t1ptr = (tank1*)vptr;}
+}
+
+repairable vics go into a gueue <- priority queue(not gonna do this) just a regular queue;
+
+class repairBay{
+repairs occur here
+vector of 3=3 bays
+lokos at parts that need to be fixed, query the scrapyard(do they have part number 2.. etc..)
+vic in scrap yard has 8,9,10, add what ever part you take from a scrap yard to the damaged vehicle parts list that was in the scrapyard
+scrapyard;
+warehouse;
+warehouse notifies supply of what parts were used and need to be replaced.
+warehouse is a vector or array of parts and quantities
+parrallel arrays where part number is the index
+wh[2];
+q[2]--;
+if the part isnt in the scrapyard or warehouse. vic gets popped to a temp queue until part arrives. once part arrives regular queue interrupts
+and pulls required vic from temp queue.
+
+possible to have no good parts in scrap yard, if so just delete it
+
+}
+
+tank class
+wheeled class
+half track class
+
+
+
+vector
+list
+queue
+priority queue
+stack
+heap
+map
+mutltimap
+set??
+multiset??
