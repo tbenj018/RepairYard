@@ -46,16 +46,19 @@ void menu(){
               break;
           case '4':{
               wptr = new Wheeled(4);
+              wptr->addParts4(gptr);
               vptr = wptr;
               MyVehicles.push_back(vptr);}
               break;
           case '5':{
               wptr = new Wheeled(5);
+              wptr->addParts5(gptr);
               vptr = wptr;
               MyVehicles.push_back(vptr);}
               break;
           case '6':{
               hptr = new HalfTrack(6);
+              hptr->addParts(gptr);
               vptr = hptr;
               MyVehicles.push_back(vptr);}
               break;

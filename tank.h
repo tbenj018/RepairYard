@@ -18,15 +18,13 @@ public:
     }
     void addParts(default_random_engine* gptr){
         uniform_int_distribution<int> Pdist(1,100);
-        normal_distribution <double> Ndist(3,1);   ///mean and std div
           for(int i = 1; i < 12; i++){
-            int mean = (int)Ndist(*gptr);
             int p = Pdist(*gptr);
                 if(p > 66){
-                    bParts.push_back(mean * Tid);
+                    bParts.push_back(i * Tid);
                 }
                 else{
-                    gParts.push_back(mean * Tid);
+                    gParts.push_back(i * Tid);
                 }
         }
     }/*
