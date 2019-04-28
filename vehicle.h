@@ -65,7 +65,7 @@ public:
           if(Pitr!=bParts.end()){cout<<", ";}
           else{cout<<" ";}
       }
-      cout<<" ] "<<endl<<endl;
+      cout<<"] "<<endl<<endl;
 
   }
 };
