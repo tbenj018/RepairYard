@@ -25,7 +25,7 @@ public:
     Vehicle(){Tid=0;}
     Vehicle(int i){Tid=i;}
     int getType(){return Tid;}
-    int  getRepairTime();
+    int getRepairTime();
 
     void setRepairTime(int hoursRequired);
 
@@ -33,17 +33,12 @@ public:
 
     Vehicle( const Vehicle &src);
 
-    void display(ofstream& out);
+    void display();
+    void displayToFile(ofstream& out);
 
     list<int> getWorkingParts();
 
     list<int> getBrokenParts();
-
-    bool operator <  (Vehicle *rhs);
-
-    bool operator != (Vehicle *rhs);
-
-    bool operator == (Vehicle *rhs);
 
     void setStatus(const char* status, ofstream& out);
 };

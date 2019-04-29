@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <vector>
 
-RepairBay::RepairBay(Inventory *passedInventory)
+RepairBay::RepairBay(PartsInventory *passedInventory)
 {
 	// sets the vehicle pointer to null
 	vPtr = nullptr;

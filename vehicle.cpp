@@ -6,10 +6,28 @@
 
 using namespace std
 
-void Vehicle::display(ofstream& out){
-    out << "Vehicle Type: " << Tid << endl;
+int Vehicle::getHoursReq()
+{
+	return repairTime;
+}
+
+void Vehicle::setHoursReq(int hours)
+{
+	repairTime = hours;
+}
+
+void Vehicle::displayToFile(ofstream &out)
+{
+    out << "Vehicle: " << m_idNum << " has status: " << m_status << "\n";
+    out << "type: " << m_type << " vehicle" <<endl;
+    out << "Repair Time: " << m_hoursNeeded<< endl;
+    out << endl;
+}
+
+void Vehicle::displayParts(){
+    cout << "Vehicle Type: " << Tid << endl;
     Pitr = gParts.begin();
-    out<<" Accept list [ ";
+    cout<<" Accept list [ ";
     while(Pitr!=gParts.end())
     {
         out<<*Pitr;

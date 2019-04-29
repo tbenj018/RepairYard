@@ -19,7 +19,7 @@ class RepairBay
 
     ~RepairBay();
 
-    RepairBay(Inventory* passedInventory);
+    RepairBay(PartsInventory* passedInventory);
 
     void repairAndTest();
     //returns whether a vehicle passed tests
