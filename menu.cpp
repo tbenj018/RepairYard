@@ -1,4 +1,4 @@
-// MainMenu.h
+/*/ MainMenu.h
 #include <iostream>
 #include <list>
 #include "menu.h"
@@ -9,11 +9,58 @@
 
 using namespace std;
 
-void menu(){
+void Vehicle::generateVehicles(ofstream& out){
+    tptr = new Tank(1);
+    tptr->addParts(gptr);
+    tptr = new Tank(2);
+    tptr->addParts(gptr);
+    tptr = new Tank(3);
+    tptr->addParts(gptr);
+    wptr = new Wheeled(4);
+    wptr->addParts4(gptr);
+    wptr = new Wheeled(5);
+    wptr->addParts5(gptr);
+    hptr = new HalfTrack(6);
+    hptr->addParts(gptr);
+    vptr = tptr;
+    vptr = wptr;
+    vptr = hptr;
+    MyVehicles.push_back(vptr);
+
+  vitr = MyVehicles.begin();
+  while(vitr != MyVehicles.end()){
+      t = (*vitr)->getType();
+      if(t == 1){
+          tptr = (Tank*)*vitr;
+          tptr->display(out);
+      }
+      else if(t == 2){
+          tptr = (Tank*)*vitr;
+          tptr->display(out);
+      }
+      else if(t == 3){
+          tptr = (Tank*)*vitr;
+          tptr->display(out);
+      }
+      else if(t == 4){
+          wptr = (Wheeled*)*vitr;
+          wptr->display(out);
+      }
+      else if(t == 5){
+          wptr = (Wheeled*)*vitr;
+          wptr->display(out);
+      }
+      else if(t == 6){
+          hptr = (HalfTrack*)*vitr;
+          hptr->display(out);
+      }
+  vitr++;}
+}
+
+void menu(ofstream& out){
     list<Vehicle*> MyVehicles;
     list<Vehicle*>::iterator vitr;
-    default_random_engine* gptr;
-    gptr = new default_random_engine(time(NULL));
+    default_random_engine* gptr = new default_random_engine(time(NULL));
 
     Tank * tptr;
     Wheeled * wptr;
@@ -68,27 +115,27 @@ void menu(){
                   t = (*vitr)->getType();
                   if(t == 1){
                       tptr = (Tank*) *vitr;
-                      tptr->display();
+                      tptr->display(out);
                   }
                   else if(t == 2){
                       tptr = (Tank*)*vitr;
-                      tptr->display();
+                      tptr->display(out);
                   }
                   else if(t == 3){
                       tptr = (Tank*)*vitr;
-                      tptr->display();
+                      tptr->display(out);
                   }
                   else if(t == 4){
                       wptr = (Wheeled*)*vitr;
-                      wptr->display();
+                      wptr->display(out);
                   }
                   else if(t == 5){
                       wptr = (Wheeled*)*vitr;
-                      wptr->display();
+                      wptr->display(out);
                   }
                   else if(t == 6){
                       hptr = (HalfTrack*)*vitr;
-                      hptr->display();
+                      hptr->display(out);
                   }
               vitr++;}
               break;
@@ -118,4 +165,4 @@ char menuDisplay(){
       cin >> menuOption;
       return menuOption;
 
-}
+}*/
