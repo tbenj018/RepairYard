@@ -18,35 +18,26 @@ protected:
     list<int>::iterator Pitr;
     list<int> bParts;
     int repairTime = 0;
-    const char* status;
+
 
 
 public:
     Vehicle(){Tid=0;}
     Vehicle(int i){Tid=i;}
+    Vehicle( const Vehicle &src);
     int getType(){return Tid;}
     int getRepairTime();
-
     void setRepairTime(int hoursRequired);
-
-    void minusTimeReq();
-
-    Vehicle( const Vehicle &src);
-
-    void display();
-    void displayToFile(ofstream& out);
-
+    void displayParts();
     list<int> getWorkingParts();
-
     list<int> getBrokenParts();
-
-    void setStatus(const char* status, ofstream& out);
+    //void setStatus(const char* status, ofstream& out);
 };
-
+/*
 inline
 std::ofstream& operator<<(std::ofstream &out, Vehicle &vee){
-    vee.display(out);
+    vee.displayParts();
     return out;
-}
+}*/
 
 #endif // VEHICLE_H_INCLUDED

@@ -11,8 +11,5 @@
 using namespace std;
 
 int main(){
-  //menu(menu->out);
-  ofstream& report = ("Report.txt", ofstream::out );
-  YardMaster vee;
-  vee.generateVehicles(report);
+
 }

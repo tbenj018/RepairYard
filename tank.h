@@ -12,9 +12,9 @@ class Tank:public Vehicle{
 public:
     Tank(){}
     Tank(int t){Tid = t;}
-    void display(ofstream& out){
+    void display(){
         cout<<"Tank: ";
-        Vehicle::display(out);
+        Vehicle::displayParts();
     }
     void addParts(default_random_engine* gptr){
         uniform_int_distribution<int> Pdist(1,100);

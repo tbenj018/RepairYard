@@ -4,24 +4,22 @@
 #include <ctime>
 #include "vehicle.h"
 
-using namespace std
+using namespace std;
 
-int Vehicle::getHoursReq()
-{
+
+Vehicle::Vehicle( const Vehicle &src){
+    this-> Tid = src.Tid;
+    this-> gParts = gParts;
+    this-> bParts = bParts;
+    this-> repairTime = repairTime;
+}
+
+int Vehicle::getRepairTime(){
 	return repairTime;
 }
 
-void Vehicle::setHoursReq(int hours)
-{
+void Vehicle::setRepairTime(int hours){
 	repairTime = hours;
-}
-
-void Vehicle::displayToFile(ofstream &out)
-{
-    out << "Vehicle: " << m_idNum << " has status: " << m_status << "\n";
-    out << "type: " << m_type << " vehicle" <<endl;
-    out << "Repair Time: " << m_hoursNeeded<< endl;
-    out << endl;
 }
 
 void Vehicle::displayParts(){
@@ -30,25 +28,24 @@ void Vehicle::displayParts(){
     cout<<" Accept list [ ";
     while(Pitr!=gParts.end())
     {
-        out<<*Pitr;
+        cout<<*Pitr;
         Pitr++;
-        if(Pitr!=gParts.end()){out<<", ";}
-        else{out<<" ";}
+        if(Pitr!=gParts.end()){cout<<", ";}
+        else{cout<<" ";}
     }
-    out<<"] "<<endl;
-    out<<" Reject list [ ";
+    cout<<"] "<<endl;
+    cout<<" Reject list [ ";
     Pitr=bParts.begin();
     while(Pitr!=bParts.end())
     {
-        out<<*Pitr;
+      cout<<*Pitr;
         Pitr++;
-        if(Pitr!=bParts.end()){out<<", ";}
-        else{out<<" ";}
+        if(Pitr!=bParts.end()){cout<<", ";}
+        else{cout<<" ";}
     }
-    out<<"] "<<endl<<endl;
+    cout<<"] "<<endl<<endl;
 
 }
-
 
 
 list<int> Vehicle::getWorkingParts(){

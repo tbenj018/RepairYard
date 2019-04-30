@@ -16,8 +16,6 @@ class PartsInventory
 
         list<int> getUsedParts();
 
-        void addVehicleToStrip(Vehicle* vee);
-
         int numberOfNewParts();
 
         int numberOfUsedParts();

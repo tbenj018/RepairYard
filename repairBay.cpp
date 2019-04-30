@@ -1,5 +1,5 @@
-#include  "repairBay.h"
-#include  "inventory.h"
+/*/#include "repairBay.h"
+#include "partsInventory.h"
 #include <algorithm>
 #include <vector>
 
@@ -117,4 +117,4 @@ void RepairBay::display(ostream &out, ofstream& outs)
 	out << "id of bay "<< id << endl;
 	outs << "id of bay "<< id << endl;
 }
-int RepairBay::bayNumber = 0;
+int RepairBay::bayNumber = 0;*/

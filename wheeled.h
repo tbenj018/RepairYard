@@ -10,9 +10,9 @@ class Wheeled:public Vehicle{
 public:
     Wheeled(){}
     Wheeled(int w){Tid = w;}
-    void display(ofstream& out){
+    void display(){
       cout<<"Wheeled: ";
-      Vehicle::display(out);
+      Vehicle::displayParts();
     }
     void addParts4(default_random_engine* gptr){
         uniform_int_distribution<int> Pdist(1,100);

@@ -4,7 +4,7 @@
 
 PartsInventory::partsInventory()
 {
-    generateArrivingParts();
+    ArrivingParts();
 }
 
 list<int> PartsInventory::getNewParts()
@@ -15,15 +15,6 @@ list<int> PartsInventory::getNewParts()
 list<int> PartsInventory::getUsedParts()
 {
     return usedParts;
-}
-
-void PartsInventory::addVehicleToStrip(Vehicle *vee)
-{
-    list<int> workingParts = vee->getWorkingParts();
-    for (unsigned int i = 0; i < workingParts.size(); i++)
-    {
-        usedParts.push_back(workingParts[i]);
-    }
 }
 
 int PartsInventory::numberOfNewParts()

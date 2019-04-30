@@ -12,9 +12,9 @@ private:
 public:
     HalfTrack(){}
     HalfTrack(int h){Tid = h;}
-    void display(ofstream& out){
+    void display(){
       cout<<"HalfTrack: ";
-      Vehicle::display(out);
+      Vehicle::displayParts();
     }
     void addParts(default_random_engine* gptr){
         uniform_int_distribution<int> Pdist(1,100);
