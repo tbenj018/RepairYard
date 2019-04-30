@@ -44,7 +44,7 @@ private:
   //uniform_int_distribution<int> Pdist(1,100);
 
 public:
-    YardMaster();
+    //YardMaster();
     YardMaster(string filename);
 
   //YardMaster(RepairYard *repairYard, int desiredDays,  string fileName);

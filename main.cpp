@@ -11,5 +11,13 @@
 using namespace std;
 
 int main(){
+  string filename;
+
+  cout << "Enter file name: ";
+  cin >> filename;
+
+  YardMaster master(filename);
+
+  master.VehicleList();
 
 }
