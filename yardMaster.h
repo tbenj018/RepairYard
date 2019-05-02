@@ -7,6 +7,7 @@
 #include "tank.h"
 #include "wheeled.h"
 #include "halfTrack.h"
+//#include "repairYard.h"
 
 class YardMaster{
 protected:
@@ -20,18 +21,13 @@ protected:
     Vehicle * vptr;
 
     int t;
+
 private:
     void manageNewArrivals(list<Vehicle*> newArrivals, ofstream& out);
 
     void repairOrScrap(Vehicle * vee, int partsRatio, ofstream& out);
 
-    void sendToScrap();
-
-    bool checkStatus();
-
-    bool checkForParts(Vehicle *vee, ofstream& out);
-
-    bool checkInventory();
+    bool checkForParts(Vehicle *vehicle, ofstream& out);
 
     void addVehicleToBay(Vehicle Vehicle);
 
@@ -41,21 +37,20 @@ private:
 
     int numberOfArrivals;
 
+    //RepairYard *repairYard;
+
   //uniform_int_distribution<int> Pdist(1,100);
 
 public:
-    //YardMaster();
     YardMaster(string filename);
+    YardMaster();
 
   //YardMaster(RepairYard *repairYard, int desiredDays,  string fileName);
     ~YardMaster();
     void addHour(ofstream& out);
-
-    void VehicleList();
-
     void manageYard(ofstream& out);
     void anotherRun();
-    void generateVehicles();
+
 
   //RepairYard* getRepairYard();
 

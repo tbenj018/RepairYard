@@ -7,17 +7,25 @@
 #include "wheeled.h"
 #include "halfTrack.h"
 #include "yardMaster.h"
+#include "repairYard.h"
+#include "repairBay.h"
 
 using namespace std;
 
 int main(){
   string filename;
+/*	// creates the yardmaster to manage the repair yard
+	YardMaster *yardMaster = new YardMaster(repairYard, days, filename);
 
-  cout << "Enter file name: ";
+	// executes his job of managing the yard.
+	yardMaster->manageYard(yardMaster->out);*/
+  cout << "Please enter a file name: ";
   cin >> filename;
 
-  YardMaster master(filename);
+  RepairYard *master = new RepairYard(filename);
 
-  master.VehicleList();
+  Vehicle vee;
+
+  master->generateVehicles(master->out);
 
 }

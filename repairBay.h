@@ -1,4 +1,4 @@
-/*#ifndef REPAIRBAY_H_INCLUDED
+#ifndef REPAIRBAY_H_INCLUDED
 #define REPAIRBAY_H_INCLUDED
 #include "partsInventory.h"
 #include "vehicle.h"
@@ -6,12 +6,13 @@
 #include <queue>
 #include <vector>       // std::vector
 #include <random>
+#include <fstream>
 class RepairBay
 {
   public:
     static int bayNumber;
 
-    Inventory *inventory;
+    PartsInventory *inventory;
 
     priority_queue<Vehicle,vector<Vehicle*>> *pQueue;
 
@@ -37,17 +38,12 @@ class RepairBay
 
     Vehicle* returnComplete();
 
-    // places a new vehicle in the bay
-    void putVehicleInBay(Vehicle &addedVehicle);
-
     // display information about the bay
-    void display(ostream &out, ofstream& outs);
+    void display(ostream &out);
 
     bool isPartAvailable();
 
     void placeInBay(Vehicle *vehicle, ofstream&);
-
-    void getTimeReq();
 
     bool wasTested();
 
@@ -61,4 +57,3 @@ class RepairBay
 };
 // sets the static variable.
 #endif
-*/

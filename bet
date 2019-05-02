@@ -1,0 +1,40 @@
+Vehicle Type: 4
+ Accept list [ 32, 34, 37, 38, 39 ] 
+ Reject list [ 31, 33, 35, 36, 40 ] 
+
+Vehicle Type: 4
+ Accept list [ 32, 34, 37, 38, 39 ] 
+ Reject list [ 31, 33, 35, 36, 40 ] 
+
+Vehicle Type: 6
+ Accept list [ 1, 2, 3, 4, 5, 31, 32, 33, 36, 37, 38, 39 ] 
+ Reject list [ 34, 35, 40 ] 
+
+Vehicle Type: 4
+ Accept list [ 32, 34, 37, 38, 39 ] 
+ Reject list [ 31, 33, 35, 36, 40 ] 
+
+Vehicle Type: 6
+ Accept list [ 1, 2, 3, 4, 5, 31, 32, 33, 36, 37, 38, 39 ] 
+ Reject list [ 34, 35, 40 ] 
+
+Vehicle Type: 6
+ Accept list [ 1, 3, 4, 5, 31, 32, 33, 35, 36, 37, 38, 40 ] 
+ Reject list [ 2, 34, 39 ] 
+
+Vehicle Type: 4
+ Accept list [ 32, 34, 37, 38, 39 ] 
+ Reject list [ 31, 33, 35, 36, 40 ] 
+
+Vehicle Type: 6
+ Accept list [ 1, 2, 3, 4, 5, 31, 32, 33, 36, 37, 38, 39 ] 
+ Reject list [ 34, 35, 40 ] 
+
+Vehicle Type: 6
+ Accept list [ 1, 3, 4, 5, 31, 32, 33, 35, 36, 37, 38, 40 ] 
+ Reject list [ 2, 34, 39 ] 
+
+Vehicle Type: 3
+ Accept list [ 6, 9, 12, 15, 21, 27, 33 ] 
+ Reject list [ 3, 18, 24, 30 ] 
+
